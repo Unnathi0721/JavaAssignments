@@ -2,15 +2,10 @@ import java.util.*;
 public class Assignment1 {
     public static boolean checkAllAlphabets(String s){
         boolean[] array=new boolean[26];
+        s=s.toLowerCase();
         for(int i=0;i<s.length();i++){
             if(Character.isAlphabetic(s.charAt(i))){
-                if(Character.isLowerCase(s.charAt(i))){
-                    array[s.charAt(i)-'a']=true;
-                }
-
-                else{
-                    array[s.charAt(i)-'A']=true;
-                }
+                array[s.charAt(i)-'a']=true;
             }
         }
         for(int i=0;i<26;i++){
