@@ -25,15 +25,15 @@ public class KYC {
         //Date signUpDate=new SimpleDateFormat("dd-MM-yyyy").parse(date1);
         Scanner scanner=new Scanner(System.in);
         System.out.println("Enter no. of queries:");
-        int t=scanner.nextInt();
+        int queries=scanner.nextInt();
         scanner.nextLine();
-        while (t > 0) {
+        while (queries > 0) {
             System.out.println("Enter SignUp date :");
             String date1 = scanner.nextLine();
             System.out.println("Enter Current date :");
             String date2 = scanner.nextLine();
             printRange(date1,date2);
-            t--;
+            queries--;
         }
     }
 }
