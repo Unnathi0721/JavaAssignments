@@ -24,7 +24,7 @@ public class PingDemo {
                 int start=st.indexOf("time=");
                 int end=st.indexOf("ms");
                 time[i]=Integer.parseInt(st.substring(start+5,end));
-                System.out.println(time[i]+" hi");
+                System.out.println("Time : "+time[i]);
             }
             while((st=stdInput.readLine())!=null) {
                 System.out.println(st);
