@@ -1,5 +1,5 @@
 import java.util.*;
-public class Assignment1 {
+public class Assignment2 {
     public static boolean checkAllAlphabets(String s){
         boolean[] array=new boolean[26];
         s=s.toLowerCase();
