@@ -4,6 +4,19 @@ import java.util.*;
 
 public class StudentList {
     public List<Student> list=new ArrayList<Student>();
+    public static void solveQueries(StudentList studentList){
+        Streams stream = new Streams();
+        stream.printDepartments(studentList.list);
+        stream.getMaleStudentOfCSE(studentList.list);
+        stream.getNames(studentList.list);
+        stream.countMaleFemale(studentList.list);
+        stream.averageAgeOfMaleFemale(studentList.list);
+        stream.HighestPercentage(studentList.list);
+        stream.countStudent(studentList.list);
+        stream.averageOfDepartment(studentList.list);
+        stream.getCount(studentList.list);
+        stream.findYoungestStudent(studentList.list);
+    }
     public static void main(String[] args) {
         StudentList studentList = new StudentList();
         //studentList.list.add();
@@ -23,16 +36,7 @@ public class StudentList {
         studentList.list.add(new Student(255, "Ali Baig", 17, "Male", "Electronic", 2018, 88.4));
         studentList.list.add(new Student(266, "Sanvi Pandey", 17, "Female", "Electric", 2019, 72.4));
         studentList.list.add(new Student(277, "Anuj Chettiar", 18, "Male", "Computer Science", 2017, 57.5));
-        Streams stream = new Streams();
-        stream.printDepartments(studentList.list);
-        stream.getMaleStudentOfCSE(studentList.list);
-        stream.getNames(studentList.list);
-        stream.countMaleFemale(studentList.list);
-        stream.averageAgeOfMaleFemale(studentList.list);
-        stream.HighestPercentage(studentList.list);
-        stream.countStudent(studentList.list);
-        stream.averageOfDepartment(studentList.list);
-        stream.getCount(studentList.list);
-        stream.findYoungestStudent(studentList.list);
+        solveQueries(studentList);
+        //Streams
     }
 }
