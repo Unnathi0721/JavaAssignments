@@ -14,7 +14,7 @@ public class Main {
         Character character;
         String string;
         try{
-            infile=new Scanner(new File("text.txt"));
+            infile=new Scanner(new File("input.txt"));
             PrintWriter pw=new PrintWriter("Output.txt");
             while(infile.hasNext()){
                 string=infile.next();
