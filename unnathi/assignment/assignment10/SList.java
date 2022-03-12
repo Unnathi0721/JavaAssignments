@@ -7,6 +7,12 @@ public class SList<T>{
         this.next=null;
         this.data=value;
     }
+    public T getData(){
+        return this.data;
+    }
+    public SList<T> getNext(){
+        return next;
+    }
 //    @Override
 //    public String toString(){
 //        StringBuilder sb=new StringBuilder();

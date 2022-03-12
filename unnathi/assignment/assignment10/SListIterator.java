@@ -3,8 +3,8 @@ package unnathi.assignment.assignment10;
 public class SListIterator<T>{
     SList<T> head;
     private int length=0;
-    SListIterator(){
-        this.head=null;
+    SListIterator(SList<T> head ){
+        this.head=head;
     }
     void add(T data) {
         SList<T> temp = new SList<>(data);
@@ -72,5 +72,31 @@ public class SListIterator<T>{
         else {
             System.out.println("Given Value is not present in linked list");
         }
+    }
+    public SListIterator<T> Iterator(SList<T>  head)
+    {
+        this.head=head;
+        return this;
+    }
+    public String toString(){
+        String list="";
+        SList<T> temp=head;
+        while(temp.next!=null){
+            list=list+temp.data;
+        }
+        return list;
+    }
+    // returns false if next element does not exist
+    public boolean hasNext()
+    {
+        return this.head != null;
+    }
+
+    // return current data and update pointer
+    public T next()
+    {
+        T data = head.getData();
+        head = head.getNext();
+        return data;
     }
 }
